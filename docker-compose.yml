@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  noura-springboot-container:
+    image: noura-spring-boot-docker-compose:1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/noura-springboot-container
+    ports:
+      - "8080-8100:8080"
